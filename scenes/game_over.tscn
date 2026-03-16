@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://j471c20s54uw"]
+
+[ext_resource type="Script" uid="uid://btek68o1eh1ed" path="res://scripts/game_over.gd" id="1_tbwuq"]
+[ext_resource type="FontFile" uid="uid://cj3uldpvwd07" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="1_xeevv"]
+[ext_resource type="FontFile" uid="uid://xjf5amemp1hp" path="res://assests/fonts/PixelOperator8.ttf" id="3_racf3"]
+
+[node name="Game Over" type="Control" unique_id=1331743667]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tbwuq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=904790094]
+layout_mode = 0
+offset_left = -2456.0
+offset_top = -844.0
+offset_right = 3802.0
+offset_bottom = 2191.0
+color = Color(0.54509807, 0, 0.23921569, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2030825325]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 202.0
+offset_right = 1057.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 80
+text = "YOU DIED !!!!"
+
+[node name="Button" type="Button" parent="." unique_id=550515970]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 340.0
+offset_right = 673.0
+offset_bottom = 409.0
+theme_override_fonts/font = ExtResource("3_racf3")
+theme_override_font_sizes/font_size = 60
+text = "Retry "
+
+[node name="Button2" type="Button" parent="." unique_id=1536294366]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 439.0
+offset_right = 647.0
+offset_bottom = 523.0
+theme_override_fonts/font = ExtResource("3_racf3")
+theme_override_font_sizes/font_size = 60
+text = "Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

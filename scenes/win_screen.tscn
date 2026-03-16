@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://budjkrkiopncw"]
+
+[ext_resource type="Script" uid="uid://bwjbjngwhvct6" path="res://scripts/win_screen.gd" id="1_2l6cc"]
+[ext_resource type="FontFile" uid="uid://cj3uldpvwd07" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="2_e41g7"]
+[ext_resource type="FontFile" uid="uid://xjf5amemp1hp" path="res://assests/fonts/PixelOperator8.ttf" id="3_0lrm4"]
+
+[node name="Win Screen" type="Control" unique_id=1486938792]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2l6cc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=188252928]
+layout_mode = 0
+offset_left = -3491.0
+offset_top = -2186.0
+offset_right = 7862.0
+offset_bottom = 4488.0
+color = Color(0, 0.39215687, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1949339471]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 58.0
+offset_right = 909.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("2_e41g7")
+theme_override_font_sizes/font_size = 80
+text = "YOU WIN !!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=2121119917]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 200.0
+offset_right = 975.0
+offset_bottom = 261.0
+theme_override_fonts/font = ExtResource("3_0lrm4")
+theme_override_font_sizes/font_size = 60
+text = "Coins Collected!"
+
+[node name="Button" type="Button" parent="." unique_id=2113289370]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 326.0
+offset_right = 827.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("3_0lrm4")
+theme_override_font_sizes/font_size = 60
+text = "Play Again"
+
+[node name="Button2" type="Button" parent="." unique_id=1846056968]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 424.0
+offset_right = 702.0
+offset_bottom = 493.0
+theme_override_fonts/font = ExtResource("3_0lrm4")
+theme_override_font_sizes/font_size = 60
+text = "Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

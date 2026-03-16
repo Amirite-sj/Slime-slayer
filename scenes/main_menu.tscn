@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b4v8sahvnbdwf"]
+
+[ext_resource type="Script" uid="uid://8wpwsvedr34x" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://xjf5amemp1hp" path="res://assests/fonts/PixelOperator8.ttf" id="2_bqqt6"]
+
+[node name="Main Menu" type="Control" unique_id=643172312]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ekxnf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1636456279]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8376.0
+offset_top = -3175.0
+offset_right = 8617.0
+offset_bottom = 4119.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(3.0611158e-05, 0.4111747, 0.8227176, 0.91764706)
+
+[node name="Label" type="Label" parent="." unique_id=642056851]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 172.0
+offset_right = 902.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 60
+text = "Slime Slayer"
+
+[node name="Button" type="Button" parent="." unique_id=47033805]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 330.0
+offset_right = 647.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
